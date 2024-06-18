@@ -1,14 +1,26 @@
-<!-- index.html -->
 <!DOCTYPE html>
 <html>
 <head>
     <title>Digital Asset Management</title>
     <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
 </head>
 <body>
-<h1>Digital Asset Management</h1>
-<button id="importBtn">Import Files</button>
-<div id="libraryContainer"></div>
+<div class="top-nav">
+    <h1>Digital Asset Management</h1>
+    <div class="search-container">
+        <input type="text" id="searchInput" placeholder="Search...">
+    </div>
+    <div class="button-group">
+            <button id="importBtn" title="Import Files"><i class="fas fa-file-import"></i></button>
+            <button id="deleteBtn" title="Delete" disabled><i class="fas fa-trash-alt"></i></button>
+            <button id="undoBtn" title="Undo" disabled><i class="fas fa-undo"></i></button>
+            <button id="redoBtn" title="Redo" disabled><i class="fas fa-redo"></i></button>
+            <button id="locationBtn" title="Go to Location" disabled><i class="fas fa-folder-open"></i></button>
+        </div>
+    </div>
+    <div id="libraryContainer"></div>
+</div>
 <script src="renderer.js"></script>
 </body>
 </html>
